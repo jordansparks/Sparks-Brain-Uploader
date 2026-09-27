@@ -11,13 +11,13 @@ This will be a large complex software with a rich UI that will convert a connect
 
 1. Ensure MySQL or MariaDB is installed on your local machine.
 2. MySQL username should be root with no password.
-      We will add support for other MySQL usernames and passwords later.
-      This software can share MySQL with other databases. All of our DBs will be prefixed with "sb_"
-      Our DBs will all force MyISAM table format for ease of backups and isolation.
+      - We will add support for other MySQL usernames and passwords later.
+      - This software can share MySQL with other databases. All of our DBs will be prefixed with "sb_"
+      - Our DBs will all force MyISAM table format for ease of backups and isolation.
 3. Clone the repository to a folder on your machine.
 4. Decided where you want your folder that stores all the large raw connectome data.
-      Default location is C:\SparksBrain\
-      You will be able to change it on startup.
+      - Default location is C:\SparksBrain\
+      - You will be able to change it on startup.
 5. Open the solution (.sln file) in Visual Studio
 6. ...more soon...
 
