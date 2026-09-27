@@ -32,5 +32,5 @@ This will be a large complex software with a rich UI that will convert a connect
 
 ## License
 
-Apache License 2.0
-This allows anyone to use it freely for whatever they want.
+- Apache License 2.0
+- This allows anyone to use it freely for whatever they want.
