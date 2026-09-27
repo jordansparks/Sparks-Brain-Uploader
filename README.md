@@ -13,12 +13,16 @@ This will be a large complex software with a rich UI that will convert a connect
       - We will add support for other MySQL usernames and passwords later.
       - This software can share MySQL with other databases. All of our DBs will be prefixed with "sb_"
       - Our DBs will all force MyISAM table format for ease of backups and isolation.
-3. Decided where you want your folder that stores all the large raw connectome data.
-      - Default location will be C:\SparksBrain\
+3. Decide where you want your folder that stores all the large raw connectome data.
+      - Default location will be C:\SparksBrainConnectomes\
       - But you will be able to change it on startup.
 
 ## Installation
 
+- There is currently no way to install other than building from source as described in the next section.
+- If there is any demand at all, we might eventually make a .zip available that contains the .exe and .dlls.
+- We would put the .zip over at the right under Releases, Latest Build.
+- 
 - All installation is done via Git
 - 
 - Download SparksBrainUploader-v0.1.zip
