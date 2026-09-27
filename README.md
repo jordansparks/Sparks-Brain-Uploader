@@ -15,44 +15,42 @@ This will be a large complex software with a rich UI that will convert a connect
       - Our DBs will all force MyISAM table format for ease of backups and isolation.
 3. Decide where you want your folder that stores all the large raw connectome data.
       - Default location will be C:\SparksBrainConnectomes\
-      - But you will be able to change it on startup.
+      - But you will be able to set it on startup.
 
 ## Installation
 
-- There is currently no way to install other than building from source as described in the next section.
+- There is currently no way to install other than downloading source and building from source as described in the next sections.
 - If there is any demand at all, we might eventually make a .zip available that contains the .exe and .dlls.
 - We would put the .zip over at the right under Releases, Latest Build.
-- 
-- All installation is done via Git
-- 
-- Download SparksBrainUploader-v0.1.zip
-- Do not use GitHub’s green Code → Download ZIP button, because that downloads the source code
-- Extract it to someplace like C:\SparksBrainUploader\
-- If you are downloading a new version, just extract right on top of the old version and choose "Replace Files in Destination".
-- Run SparksBrainUploader.exe
+- (eventually)If you are downloading a new version, just extract right on top of the old version and choose "Replace Files in Destination".
+- (eventually)Run SparksBrainUploader.exe
+
+## Downloading Source
+
+1. Option one is to download the source as a .zip
+      - Use GitHub’s green Code → Download ZIP button
+      - Extract it to someplace like C:\SparksBrainUploader\
+2. Option two is to use Git to do the download
+      - Install Git
+      - I prefer to also install Tortoise Git
+      - Visual Studio comes with Git built in, so that's another option
+      - Clone the repository to a folder on your machine. Example: "C:\development\SparksBrainUploader\"
 
 ## Building From Source
 
-(most users would not do this and would follow the Installation instructions above instead)
-- This gives access to the most recent 
-
 1. Install Visual Studio 2026 (I use Professional Edition, but other editions will probably work)
-2. I prefer Tortoise Git instead of using the Visual Studio Git integration or Git command line.
-      - If you wish to use Tortoise Git, install Git first
-      - Then install Tortoise Git. 
-3. Clone the repository to a folder on your machine.
-      - I used "C:\SparksBrainUploader\" for the repository location on my machine. You might try that.
-4. Open the solution (.sln file) in Visual Studio
-5. ...more soon...
+2. Open the solution (.sln file) in Visual Studio
+3. There is only one configuration: Debug / Main
+4. The version is always 1.0.
+5. There are no git branches. Just main.
 
 ## Usage
 
-...
+...coming soon...
 
 ## Development
 
 - Jordan Sparks and my employees are the only contributors.
-- There are no branches, just main.
 
 ## License
 
