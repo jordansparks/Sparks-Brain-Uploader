@@ -4,7 +4,7 @@ This will be a large complex software with a rich UI that will convert a connect
 
 ## Initial Setup
 
-1. Ensure MySQL or MariaDB is installed (pretty much any version will work)
+1. Ensure MySQL or MariaDB is installed on your local machine (pretty much any version will work)
 2. MySQL username should be root with no password.
       - We will add support for other MySQL usernames and passwords later.
       - This software can share MySQL with other databases. All of our DBs will be prefixed with "sb_"
