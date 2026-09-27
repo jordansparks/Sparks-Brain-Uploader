@@ -2,13 +2,9 @@
 
 This will be a large complex software with a rich UI that will convert a connectome to a brain model ready for emulation. It will allow a large number of parameters, rules, and settings to be organized and referenced. There will then be a step that coallesces those complex parameters into the simpler parameters that will be used for actual emulation. Finally, it will be able to export that model to any of the major emulators.
 
-## Requirements
-
-- MySQL or MariaDB (pretty much any version will work)
-
 ## Initial Setup
 
-1. Ensure MySQL or MariaDB is installed on your local machine.
+1. Ensure MySQL or MariaDB is installed (pretty much any version will work)
 2. MySQL username should be root with no password.
       - We will add support for other MySQL usernames and passwords later.
       - This software can share MySQL with other databases. All of our DBs will be prefixed with "sb_"
