@@ -27,8 +27,8 @@ This will be a large complex software with a rich UI that will convert a connect
 
 ## Development
 
-Jordan Sparks and my employees are the only contributors.
-There are no branches, just main.
+-Jordan Sparks and my employees are the only contributors.
+-There are no branches, just main.
 
 ## License
 
