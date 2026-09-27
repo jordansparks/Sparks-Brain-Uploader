@@ -26,7 +26,7 @@ This will be a large complex software with a rich UI that will convert a connect
 1. Option one is to download the source as a .zip
       - Use GitHub’s green Code → Download ZIP button
       - Extract it to someplace like C:\SparksBrainUploader\
-2. Option two is to use Git to do the download
+2. Option two, the usual way, is to use Git to do the download
       - Install Git
       - I prefer to also install Tortoise Git
       - Visual Studio comes with Git built in, so that's another option
