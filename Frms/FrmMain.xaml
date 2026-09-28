@@ -1,0 +1,16 @@
+﻿<od:FrmODBase x:Class="SparksBrainUploader.FrmMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SparksBrainUploader"
+				xmlns:od="clr-namespace:OpenDental;assembly=WpfOD"
+				xmlns:ui="clr-namespace:WpfControls.UI;assembly=WpfOD"
+				xmlns:ctrl="clr-namespace:WpfControls.UI;assembly=WpfControls"
+        mc:Ignorable="d"
+				HasHelpButton="False"
+        Text="Sparks Brain Uploader" Height="450" Width="800">
+	<Grid  Background="#FFFCFDFE">
+		<ui:Menu x:Name="menuMain" HorizontalAlignment="Stretch" Height="24" />
+	</Grid>
+</od:FrmODBase>

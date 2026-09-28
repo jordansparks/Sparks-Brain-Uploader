@@ -1,0 +1,27 @@
+﻿<od:FrmODBase x:Class="SparksBrainUploader.FrmDatabase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SparksBrainUploader"
+				xmlns:od="clr-namespace:OpenDental;assembly=WpfOD"
+				xmlns:ui="clr-namespace:WpfControls.UI;assembly=WpfOD"
+				xmlns:ctrl="clr-namespace:WpfControls.UI;assembly=WpfControls"
+        mc:Ignorable="d"
+				HasHelpButton="False"
+        Text="Database" Height="266" Width="515">
+	<Grid  Background="#FFFCFDFE">
+		<ctrl:Label Width="221" Height="18" Margin="12,26,0,0" Text="MySQL Server Name (usually localhost)" HAlign="Right" VAlign="Center" />
+		<ctrl:TextBox x:Name="textServer" Height="18" Margin="234,26,0,0" Width="236" TabIndexOD="1"/>
+		<ctrl:Label Width="174" Height="18" Margin="59,48,0,0" Text="Main Database" HAlign="Right" VAlign="Center" />
+		<ctrl:TextBox x:Name="textDbMain" Height="18" Margin="234,48,0,0" Width="80" TabIndexOD="1" Text="sb_main" ReadOnly="True" ColorBack="#FFF0F0F0"/>
+		<ctrl:Label Width="92" Height="18" Margin="141,92,0,0" Text="MySQL User" HAlign="Right" VAlign="Center" />
+		<ctrl:TextBox x:Name="textUser" Height="18" Margin="234,92,0,0" Width="139" TabIndexOD="1"/>
+		<ctrl:Label Width="124" Height="18" Margin="109,114,0,0" Text="MySQL Password" HAlign="Right" VAlign="Center" />
+		<ctrl:TextBox x:Name="textPassword" Height="18" Margin="234,114,0,0" Width="139" TabIndexOD="1"/>
+		<ctrl:Button x:Name="buttonSave" Height="24" Margin="0,0,10,10" Text="Save" Click="buttonSave_Click" Width="69" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+		<ctrl:Label Width="174" Height="18" Margin="59,70,0,0" Text="Project Database" HAlign="Right" VAlign="Center" />
+		<ctrl:TextBox x:Name="textDBProj" Height="18" Margin="234,70,0,0" Width="139" TabIndexOD="1" Text="" ReadOnly="True" ColorBack="#FFF0F0F0"/>
+
+	</Grid>
+</od:FrmODBase>

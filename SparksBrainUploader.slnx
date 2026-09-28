@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="../Versioned/OpenDental/CodeBase/xCodeBase.csproj" Id="18f7bc78-4b99-48d3-a1f1-0d13a63e3cf9" />
+  <Project Path="../Versioned/OpenDental/DataConnectionBase/xDataConnectionBase.csproj" Id="29c41020-4411-41f2-9061-9b71b5b32b5d" />
+  <Project Path="../Versioned/OpenDental/WpfControls/WpfControls.csproj" Id="b6a5643a-e362-41e2-bd5b-9940324b56cc" />
+  <Project Path="../Versioned/OpenDental/WpfOD/WpfOD.csproj" Id="118540cc-3536-4e8b-94d4-402ca48a4cb0" />
+  <Project Path="CrudGenerator/CrudGenerator.csproj" Id="95f57798-a7e5-454b-9a3d-f8e718a062af" />
+  <Project Path="SparksBrainUploader.csproj" Id="eb720ee3-1190-4a8d-95f7-d9d2de737548" />
+</Solution>
