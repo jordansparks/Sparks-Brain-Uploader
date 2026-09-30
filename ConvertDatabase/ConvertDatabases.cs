@@ -83,7 +83,7 @@ namespace SparksBrainUploader {
 				}
 				//Update the preference that keeps track of what version Open Dental has successfully upgraded to.
 				//Always require major, minor, build, revision.  Will throw an exception if the revision was not explicitly set (which we always set).
-				Prefs.UpdateString(PrefName.DataBaseVersion,ListConvertDbMethodInfos[i].VersionCur.ToString(4));
+				Prefs.UpdateString(PrefName.VersionDatabase,ListConvertDbMethodInfos[i].VersionCur.ToString(4));
 			}
 		}
 	}

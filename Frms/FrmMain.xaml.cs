@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
@@ -24,10 +25,15 @@ namespace SparksBrainUploader {
 				stride: 16*4);
 			Icon=bitmapSource;
 			Load+=FrmMain_Load;
+			Shown+=FrmMain_Shown;
 		}
 
 		private void FrmMain_Load(object sender,EventArgs e) {
 			LayoutMenu();
+			BringToFront();
+		}
+
+		private void FrmMain_Shown(object sender,EventArgs e) {
 			FrmDatabase frmDatabase=new FrmDatabase();
 			frmDatabase.IsStartup=true;
 			frmDatabase.ShowDialog(this);
@@ -40,41 +46,43 @@ namespace SparksBrainUploader {
 			}
 			Prefs.FillCache();
 			ClassConvertDatabase classConvertDatabase=new ClassConvertDatabase();
-			string prefDbVersion=Prefs.GetString(PrefName.DataBaseVersion);
+			string prefDbVersion=Prefs.GetString(PrefName.VersionDatabase);
 			string toVersion=Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			if(!classConvertDatabase.Convert(prefDbVersion,toVersion)) {
 				//probably because they hit Cancel
 				Application.Current.Shutdown();
+				return;
 			}
-			BringToFront();
+			string folderConnectomes=Prefs.GetString(PrefName.FolderConnectomes);
+			if(!Directory.Exists(folderConnectomes)){
+				FrmPrefs frmPrefs=new FrmPrefs();
+				frmPrefs.ShowDialog(this);
+				if(frmPrefs.IsDialogCancel){
+					Application.Current.Shutdown();
+					return;
+				}
+			}
 		}
 
-		private void LayoutMenu(){//typically called in Loaded()
-			//Projects-----------------------------------------------------------------------------------------------------------
-			MenuItem menuItemProjects=new MenuItem("Projects");
-			menuMain.Add(menuItemProjects);
-			menuItemProjects.Add(new MenuItem("New",menuItemProjectNew_Click));
-			menuItemProjects.Add(new MenuItem("Open",menuItemProjectOpen_Click));
-			menuItemProjects.Add(new MenuItem("Close",menuItemProjectClose_Click));
-			menuItemProjects.AddSeparator();
-			menuItemProjects.Add(new MenuItem("Database",menuItemProjectDatabase_Click));
+		private void LayoutMenu(){
+			menuMain.Add(new MenuItem("Projects",menuItemProjects_Click));
+			menuMain.Add(new MenuItem("Database",menuItemDatabase_Click));
+			menuMain.Add(new MenuItem("Prefs",menuItemPrefs_Click));
 		}
 
-		private void menuItemProjectClose_Click(object sender,EventArgs e) {
-			MsgBox.Show("Close");
-		}
-
-		private void menuItemProjectDatabase_Click(object sender,EventArgs e) {
+		private void menuItemDatabase_Click(object sender,EventArgs e) {
 			FrmDatabase frmDatabase=new FrmDatabase();
 			frmDatabase.ShowDialog(this);
 		}
 
-		private void menuItemProjectNew_Click(object sender,EventArgs e) {
-			MsgBox.Show("New");
+		private void menuItemPrefs_Click(object sender,EventArgs e) {
+			FrmPrefs frmPrefs=new FrmPrefs();
+			frmPrefs.ShowDialog(this);
 		}
 
-		private void menuItemProjectOpen_Click(object sender,EventArgs e) {
-			MsgBox.Show("Open");
+		private void menuItemProjects_Click(object sender,EventArgs e) {
+			FrmProjects frmProjects=new FrmProjects();
+			frmProjects.ShowDialog(this);
 		}
 	}
 }

@@ -30,7 +30,7 @@ namespace SparksBrainUploader{
 		public bool Convert(string fromVersion,string toVersion) {
 			FromVersion=new Version(fromVersion);
 			ToVersion=new Version(toVersion);
-			if(Prefs.GetBool(PrefName.CorruptedDatabase)) {
+			if(Prefs.GetBool(PrefName.DatabaseIsCorrupted)) {
 				MsgBox.Show("Your database is corrupted because an update failed.");
 				return false;//shuts program down.
 			}
@@ -47,13 +47,13 @@ namespace SparksBrainUploader{
 				//If user clicks cancel, then close the program
 				return false;
 			}
-			Prefs.UpdateBool(PrefName.CorruptedDatabase,true);
+			Prefs.UpdateBool(PrefName.DatabaseIsCorrupted,true);
 			ConvertDatabases.FromVersion=FromVersion;
 			ProgressWin progressWin=new ProgressWin();
 			progressWin.ActionMain=() => ConvertDatabases.InvokeConvertMethods();
 			progressWin.ShowCancelButton=false;
 			progressWin.ShowDialog();
-			Prefs.UpdateBool(PrefName.CorruptedDatabase,false);
+			Prefs.UpdateBool(PrefName.DatabaseIsCorrupted,false);
 			return true;
 		}
 

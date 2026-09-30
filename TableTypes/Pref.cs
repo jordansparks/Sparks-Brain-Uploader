@@ -21,10 +21,12 @@ namespace SparksBrainUploader {
 	///<summary>Because this enum is stored in the database as strings rather than as numbers, we keep the order alphabetically.</summary>
 	public enum PrefName {
 		///<summary>Boolean 0 or 1. Gets set to true when an update is in progress and then will be set to false when finished.  Otherwise, true means that the database is in a corrupt state.</summary>
-		CorruptedDatabase,
+		DatabaseIsCorrupted,
+		///<summary>Default is C:\SparksBrainConnectomes\, but user can change it.</summary>
+		FolderConnectomes,
 		///<summary>Example: "26.5.0.0" Major version is year, and minor version increments each time we need to change the db schema, and possibly more frequent than that.</summary>
-		DataBaseVersion,
+		VersionDatabase,
 		///<summary>Example format: "26.5.0.0" Major version is year, and minor version increments each time we need to change the db schema, and possibly more frequent than that.</summary>
-		ProgramVersion,
+		VersionProgram,
 	}
 }

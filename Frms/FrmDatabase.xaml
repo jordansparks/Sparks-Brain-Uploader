@@ -9,7 +9,7 @@
 				xmlns:ctrl="clr-namespace:WpfControls.UI;assembly=WpfControls"
         mc:Ignorable="d"
 				HasHelpButton="False"
-        Text="Database" Height="266" Width="515">
+        Text="Database" Height="181" Width="515">
 	<Grid  Background="#FFFCFDFE">
 		<ctrl:Label Width="221" Height="18" Margin="12,26,0,0" Text="MySQL Server Name (usually localhost)" HAlign="Right" VAlign="Center" />
 		<ctrl:TextBox x:Name="textServer" Height="18" Margin="234,26,0,0" Width="236" TabIndexOD="1"/>

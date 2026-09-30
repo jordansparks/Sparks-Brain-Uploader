@@ -36,11 +36,13 @@ namespace SparksBrainUploader{
 				ValueString text NOT NULL
 				) DEFAULT CHARSET=utf8 ENGINE=MyISAM";
 			Db.NonQ(command);
-			command="INSERT INTO pref(PrefName,ValueString) VALUES('DataBaseVersion','26.1.0.0')";
+			command="INSERT INTO pref(PrefName,ValueString) VALUES('VersionDatabase','26.1.0.0')";
 			Db.NonQ(command);
-			command="INSERT INTO pref(PrefName,ValueString) VALUES('ProgramVersion','26.1.0.0')";
+			command="INSERT INTO pref(PrefName,ValueString) VALUES('VersionProgram','26.1.0.0')";
 			Db.NonQ(command);
-			command="INSERT INTO pref(PrefName,ValueString) VALUES('CorruptedDatabase','0')";
+			command="INSERT INTO pref(PrefName,ValueString) VALUES('DatabaseIsCorrupted','0')";
+			Db.NonQ(command);
+			command="INSERT INTO pref(PrefName,ValueString) VALUES('FolderConnectomes','')";
 			Db.NonQ(command);
 			return;
 		}
